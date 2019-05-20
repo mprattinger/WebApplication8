@@ -1,0 +1,34 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form asp-action="Index" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" type="text" class="form-control form-control-sm" placeholder="Vorname">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" type="text" class="form-control form-control-sm" placeholder="Nachname">
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="WorkingHoursWeek"></label>
+                <input asp-for="WorkingHoursWeek" type="number" class="form-control form-control-sm" step="any" placeholder="Wochenarbeitszeit in h">
+                <span asp-validation-for="WorkingHoursWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="VacationDays"></label>
+                <input asp-for="VacationDays" type="number" class="form-control form-control-sm" placeholder="Urlaubstage">
+                <span asp-validation-for="VacationDays" class="text-danger"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Speichern</button>
+    </form>
+</div>
