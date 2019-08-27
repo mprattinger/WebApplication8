@@ -16,7 +16,7 @@ namespace WebApplication8.Models
         public string LastName { get; set; }
         [Required(ErrorMessage = "Die Wochenarbeitszeit ist erforderlich!")]
         [Display(Name = "Wochenarbeitszeit")]
-        public float WorkingHoursWeek { get; set; }
+        public decimal WorkingHoursWeek { get; set; }
         [Display(Name = "Montag")]
         public bool Monday { get; set; }
         [Display(Name = "Dienstag")]
